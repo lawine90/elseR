@@ -33,9 +33,9 @@ devtools::install_github('lawine90/elseR')
 > blend2
 [1] "#B22393"
 ```
-> 예제 blend1의 색깔: ![#FF3366](https://placehold.it/15/FF3366/000000?text=+)`#FF3366` + ![#0000FF](https://placehold.it/15/0000FF/000000?text=+)`#0000FF` = ![#7F19B2](https://placehold.it/15/7F19B2/000000?text=+)`#7F19B2`
-> 예제 blend2의 색깔: ![#FF3366](https://placehold.it/15/FF3366/000000?text=+)`#FF3366` + ![#0000FF](https://placehold.it/15/0000FF/000000?text=+)`#0000FF` = ![#B22393](https://placehold.it/15/7F19B2/000000?text=+)`#B22393`
+> 예제 blend1의 색깔: ![#FF3366](https://placehold.it/15/FF3366/000000?text=+)#FF3366 + ![#0000FF](https://placehold.it/15/0000FF/000000?text=+)#0000FF = ![#7F19B2](https://placehold.it/15/7F19B2/000000?text=+)#7F19B2
+> 예제 blend2의 색깔: ![#FF3366](https://placehold.it/15/FF3366/000000?text=+)#FF3366 + ![#0000FF](https://placehold.it/15/0000FF/000000?text=+)#0000FF = ![#B22393](https://placehold.it/15/B22393/000000?text=+)#B22393
 
 
 # 4. 건의 및 문의사항
-추가적으로 수집을 원하시는 공공데이터포털의 데이터나 패키지에 대한 건의 및 문의사항은 환영입니다 :) lawine90(power1sky@gmail.com)에게 많은 연락 부탁드리겠습니다.
+건의 및 문의사항은 환영입니다 :) lawine90(power1sky@gmail.com)에게 많은 연락 부탁드리겠습니다.
