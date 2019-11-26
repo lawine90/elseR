@@ -9,6 +9,8 @@ Description: Not essential, but useful functions for R
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-Imports:
-  colorspace (>= 1.4-1)
+Depends: R (>= 3.4.3)
 RoxygenNote: 6.1.1
+Imports:
+  colorspace (>= 1.4-1),
+  dplyr (>= 0.8.0.1)
