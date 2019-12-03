@@ -4,7 +4,7 @@
 \alias{keywordComb}
 \title{Count all combinations of elements in vector and make it as dataframe.}
 \usage{
-keywordComb(x, m = 2, remove_dup = T)
+keywordComb(x, m = 2, remove_dup = F, self_conn = F)
 }
 \arguments{
 \item{x}{a vector which have more than m element(length(x) >= m).}
@@ -12,6 +12,8 @@ keywordComb(x, m = 2, remove_dup = T)
 \item{m}{a number of combination. Default set as 2.}
 
 \item{remove_dup}{if TRUE, use only unique elements in vectors(which means remove duplicates).}
+
+\item{self_conn}{if TRUE, allow nodes which have a self-connection, meaning an edge from itself to itself.}
 }
 \description{
 keywordComb count all combinations of elements in vector.
@@ -19,7 +21,7 @@ keywordComb count all combinations of elements in vector.
  Please refer more details from github or example.
 }
 \examples{
- comb2 <- keywordComb(as.character(c(1,1,2,2,1,2,1,2,1,5,5,5,3,6,5,3,5)), 2)
- comb3 <- keywordComb(as.character(c(1,1,2,2,1,2,1,2,1,5,5,5,3,6,5,3,5)), 3, remove_dup = T)
+ comb2 <- keywordComb(as.character(c(1,1,2,2,1,2,1,2,1,5,5,5,3,6,5,3,5)), m = 2, remove_dup = F, self_conn = F)
+ comb3 <- keywordComb(as.character(c(1,1,2,2,1,2,1,2,1,5,5,5,3,6,5,3,5)), m = 3, remove_dup = F, self_conn = T)
 
 }

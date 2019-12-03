@@ -7,13 +7,14 @@
 #' @param x a vector which have more than m element(length(x) >= m).
 #' @param m a number of combination. Default set as 2.
 #' @param remove_dup if TRUE, use only unique elements in vectors(which means remove duplicates).
+#' @param self_conn if TRUE, allow nodes which have a self-connection, meaning an edge from itself to itself.
 #'
 #' @examples
-#'  comb2 <- keywordComb(as.character(c(1,1,2,2,1,2,1,2,1,5,5,5,3,6,5,3,5)), 2)
-#'  comb3 <- keywordComb(as.character(c(1,1,2,2,1,2,1,2,1,5,5,5,3,6,5,3,5)), 3, remove_dup = T)
+#'  comb2 <- keywordComb(as.character(c(1,1,2,2,1,2,1,2,1,5,5,5,3,6,5,3,5)), m = 2, remove_dup = F, self_conn = F)
+#'  comb3 <- keywordComb(as.character(c(1,1,2,2,1,2,1,2,1,5,5,5,3,6,5,3,5)), m = 3, remove_dup = F, self_conn = T)
 #'
 #' @export
-keywordComb <- function(x, m = 2, remove_dup = T){
+keywordComb <- function(x, m = 2, remove_dup = F, self_conn = F){
   if(class(x) != "character"){
     stop("Invalid class. \n Please insert character vecter x.")
   }
@@ -21,13 +22,17 @@ keywordComb <- function(x, m = 2, remove_dup = T){
     stop("Invalid parameter. \n Parameter m should not exceed length of input vector x.")
   }
 
-  if(remove_dup){x = unique(x)}
+  if(remove_dup){x <- unique(x)}
   comb <- as.data.frame(t(combn(x, m)), stringsAsFactors = F)
-  comb <- dplyr::as.tbl(comb); colnames(comb) <- c('word1', 'word2')
+  comb <- dplyr::as.tbl(comb); colnames(comb) <- paste('word', 1:m, sep = '')
   comb <- dplyr::mutate(comb, value = 1)
-  comb <- dplyr::group_by(comb, word1, word2)
+  comb <- dplyr::group_by(comb, .dots = paste('word', 1:m, sep = ''))
   comb <- dplyr::summarise_all(comb, sum)
   comb <- dplyr::ungroup(comb)
+
+  if(!self_conn){
+    comb <- comb[apply(comb[,paste('word', 1:m, sep = '')], 1, function(x) length(unique(x)) != 1),]
+  }
 
   return(comb)
 }
