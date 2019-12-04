@@ -17,7 +17,7 @@ devtools::install_github('lawine90/elseR')
 
 
 # 3. 각 함수 예제
-> hexBlender(color1, color2, alpha = 0.5)
+> **hexBlender(color1, color2, alpha = 0.5)**
 > 
 > hex code로 표현된 물감을 섞는 함수입니다. 개인적으로는 ggplot이나 plotly, visNetwork 등 시각화에 주로 많이 사용하였습니다. [링크](https://meyerweb.com/eric/tools/color-blend/#:::hex)를 참고하여 만들었습니다.
 > - color1: (필수, character). hex code로 표현된 색깔.
@@ -38,7 +38,7 @@ devtools::install_github('lawine90/elseR')
 > 예제 blend2의 색깔: ![#FF3366](https://placehold.it/15/FF3366/000000?text=+)#FF3366 + ![#0000FF](https://placehold.it/15/0000FF/000000?text=+)#0000FF = ![#B22393](https://placehold.it/15/B22393/000000?text=+)#B22393
 
 
-> keywordVec(x, reverse = F, limit = NULL)
+> **keywordVec(x, reverse = F, limit = NULL)**
 > 
 > 문자열의 벡터를 카운트하여 하나의 string으로 변환해주는 함수입니다. 특정 키워드를 카운트해서 csv 파일로 출력할 때 주로 사용하였습니다.
 > - x: (필수, character). 문자열의 키워드를 포함한 벡터.
@@ -57,7 +57,7 @@ devtools::install_github('lawine90/elseR')
 ```
 
 
-> keywordComb(x, m = 2, remove_dup = F, self_conn = F)
+> **keywordComb(x, m = 2, remove_dup = F, self_conn = F)**
 > 
 > 문자열 벡터의 조합을 계산하여 data.frame 형식의 결과를 도출하는 함수입니다. 주로 visNetwork library의 edge 계산에 사용하였습니다.
 > - x: (필수, character). 문자열의 키워드를 포함한 벡터.
