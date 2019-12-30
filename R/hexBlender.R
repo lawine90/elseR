@@ -23,9 +23,9 @@ hexBlender <- function(color1, color2, alpha = 0.5){
                     col2_rgb@coords[,2],
                     col2_rgb@coords[,3]))
 
-  result_hex <- rgb(result_rgb@coords[,1]*255,
-                    result_rgb@coords[,2]*255,
-                    result_rgb@coords[,3]*255,
-                    maxColorValue = 255)
+  result_hex <- grDevices::rgb(result_rgb@coords[,1]*255,
+                               result_rgb@coords[,2]*255,
+                               result_rgb@coords[,3]*255,
+                               maxColorValue = 255)
   return(result_hex)
 }

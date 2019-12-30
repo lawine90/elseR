@@ -5,7 +5,9 @@ Date: 2019-11-25
 Version: 0.1.0
 Authors@R: c(person("Hansol", "Seo", email = "power1sky@gmail.com", role = c("aut", 'cre')))
 Maintainer: The package maintainer <yourself@somewhere.net>
-Description: Not essential, but useful functions for R
+Description: Not essential, but useful functions for R!
+    You can blend hex-code of colors, get factor value of age variables, 
+    make box-plots of groups to compare, and get combinations of a vector and so on.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true

@@ -7,8 +7,7 @@
 #' @param g a column name of factor vector in dataframe which means group.
 #'
 #' @examples
-#'  cut1 <- ageCut()
-#'  cut2 <- ageCut()
+#'  test <- boxGroup(iris, 'Sepal.Length', 'Species')
 #'
 #' @export
 boxGroup <- function(data, x, g){

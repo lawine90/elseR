@@ -17,7 +17,6 @@ boxGroup(data, x, g)
 boxGroup generate boxplots to compare groups with ggplot2 library.
 }
 \examples{
- cut1 <- ageCut()
- cut2 <- ageCut()
+ test <- boxGroup(iris, 'Sepal.Length', 'Species')
 
 }

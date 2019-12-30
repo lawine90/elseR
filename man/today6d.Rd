@@ -6,11 +6,14 @@
 \usage{
 today6d(with_time = FALSE)
 }
+\arguments{
+\item{with_time}{if TRUE, generate 10-digit string of current time.}
+}
 \description{
 today6d generate 6-digits string which indicate current day.
 }
 \examples{
  d1 <- today6d()
- d2 <- today6d(with_time = T)
+ d2 <- today6d(with_time = TRUE)
 
 }

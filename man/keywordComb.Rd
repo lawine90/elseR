@@ -21,7 +21,9 @@ keywordComb count all combinations of elements in vector.
  Please refer more details from github or example.
 }
 \examples{
- comb2 <- keywordComb(as.character(c(1,1,2,2,1,2,1,2,1,5,5,5,3,6,5,3,5)), m = 2, remove_dup = F, self_conn = F)
- comb3 <- keywordComb(as.character(c(1,1,2,2,1,2,1,2,1,5,5,5,3,6,5,3,5)), m = 3, remove_dup = F, self_conn = T)
+ comb2 <- keywordComb(as.character(c(1,1,2,2,1,5,5,3,6,5,3,5)),
+                      m = 2, remove_dup = FALSE, self_conn = FALSE)
+ comb3 <- keywordComb(as.character(c(1,1,2,2,1,5,5,3,6,5,3,5)),
+                      m = 3, remove_dup = FALSE, self_conn = TRUE)
 
 }

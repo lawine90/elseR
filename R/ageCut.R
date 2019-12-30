@@ -7,8 +7,8 @@
 #' @param interval interval of age, between 5 or 10.
 #'
 #' @examples
-#'  cut1 <- ageCut()
-#'  cut2 <- ageCut()
+#'  cut1 <- ageCut(c(12,21,31,11,22,53,62,34,55))
+#'  cut2 <- ageCut(c(12,21,31,11,22,53,62,34,55), 10)
 #'
 #' @export
 ageCut <- function(x, interval = 5){

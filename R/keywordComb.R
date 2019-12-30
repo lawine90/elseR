@@ -10,8 +10,10 @@
 #' @param self_conn if TRUE, allow nodes which have a self-connection, meaning an edge from itself to itself.
 #'
 #' @examples
-#'  comb2 <- keywordComb(as.character(c(1,1,2,2,1,2,1,2,1,5,5,5,3,6,5,3,5)), m = 2, remove_dup = F, self_conn = F)
-#'  comb3 <- keywordComb(as.character(c(1,1,2,2,1,2,1,2,1,5,5,5,3,6,5,3,5)), m = 3, remove_dup = F, self_conn = T)
+#'  comb2 <- keywordComb(as.character(c(1,1,2,2,1,5,5,3,6,5,3,5)),
+#'                       m = 2, remove_dup = FALSE, self_conn = FALSE)
+#'  comb3 <- keywordComb(as.character(c(1,1,2,2,1,5,5,3,6,5,3,5)),
+#'                       m = 3, remove_dup = FALSE, self_conn = TRUE)
 #'
 #' @export
 keywordComb <- function(x, m = 2, remove_dup = F, self_conn = F){
@@ -23,7 +25,7 @@ keywordComb <- function(x, m = 2, remove_dup = F, self_conn = F){
   }
 
   if(remove_dup){x <- unique(x)}
-  comb <- as.data.frame(t(combn(x, m)), stringsAsFactors = F)
+  comb <- as.data.frame(t(utils::combn(x, m)), stringsAsFactors = F)
   comb <- dplyr::as.tbl(comb); colnames(comb) <- paste('word', 1:m, sep = '')
   comb <- dplyr::mutate(comb, value = 1)
   comb <- dplyr::group_by(comb, .dots = paste('word', 1:m, sep = ''))
