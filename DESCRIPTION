@@ -13,4 +13,5 @@ Depends: R (>= 3.4.3)
 RoxygenNote: 6.1.1
 Imports:
   colorspace (>= 1.4-1),
-  dplyr (>= 0.8.0.1)
+  dplyr (>= 0.8.0.1),
+  ggplot2 (>= 3.2.1)
